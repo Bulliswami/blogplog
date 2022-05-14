@@ -1,0 +1,8 @@
+<p>
+    <p>Name:</p>
+    <%= @factorie.name%>
+    <p>Description:<%=@factorie.description %></p>
+    <%=link_to 'update',edit_factory_path(@factorie)%>
+    <%= link_to 'Delete', factories_path(@factorie), method: :delete, onclick: "return confirm('Are you sure?')"   %>
+    <%=link_to 'Go to factories',factories_path()%>
+</p>

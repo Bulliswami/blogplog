@@ -1,0 +1,17 @@
+<h1>Create New Book</h1>
+<%= form_with scope: :book,url: books_path,local:true do |f| %>
+    <p>
+        <%=f.label:name%><br/>
+        <%=f.text_field:name%>
+
+    </p>
+    <p>
+        <%=f.label:pages%><br/>
+    <%=f.number_field:pages%>
+    </p>
+    <p>
+        <%=f.label:author%>
+        <%=f.text_field:author%>
+    </p>
+   <%=f.submit%>
+<%end%>

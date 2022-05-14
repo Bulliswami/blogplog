@@ -1,0 +1,25 @@
+<p>Listing:</p>
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Location</th>
+            <th colspan='3'>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% @factories_all.each do |f| %>
+            <tr>
+                <td><%= f.name %></td> 
+                <td><%= f.description %></td>  
+                <td><%= f.location %></td>
+                <td><%=link_to 'Show',factory_path(f)%></td> 
+                <td><%=button_to 'Delete',factory_path(f),method: :delete%></td> 
+                <td><%=link_to 'Edit',edit_factory_path(f)%></td> 
+                
+            </tr>
+        <% end %>
+    </tbody>
+</table>
+<p><%=link_to 'Create New',new_factory_path()%></p> 

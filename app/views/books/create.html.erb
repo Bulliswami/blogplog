@@ -1,0 +1,13 @@
+<p>
+    <%@books_all.each do |bk|%>
+        <p>Title-<%=bk.name%></p>
+        <p>Pages-<%=bk.pages%></p>
+        <p>Author-<%=bk.author%></p>
+    <%end%>
+    <p>
+        Newly Inserted One is the below one
+    </p>
+    <%=@book.name%>
+    <%=@book.pages%>
+    <%=@book.author%>
+</p>
